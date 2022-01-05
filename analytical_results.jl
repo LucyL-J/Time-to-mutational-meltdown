@@ -93,3 +93,12 @@ ratchet_time(w0, s, mu, K) = (-log(w0)/log(1+s) - log(K))/speed_ratchet_Gessler(
 meltdown_time(s, mu, K) = (-2*log(K)/(mu * log(1+s)) + 1/4)^0.5 - 1/2
 
 extinction_time(w0, s, mu, K) = start_ratchet(w0, s, mu, K) + (-log(w0)/log(1+s) - log(K))/speed_ratchet_Gessler(s, mu, K, 1) + (-2*log(K)/(mu * log(1+s)) + 1/4)^0.5 - 1/2
+
+function optimal_s(w0, mu, K, low_s, high_s)
+    global w0_dummie = w0
+    global mu_dummie = mu
+    global K_dummie = K
+    extinction_time_s(s) = extinction_time(w0_dummie, s, mu_dummie, K_dummie)
+    res = optimize(extinction_time_s, low_s, high_s)
+    return Optim.minimizer(res)
+end
