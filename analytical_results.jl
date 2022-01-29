@@ -16,6 +16,8 @@ mean_num_mutations(t, s, mu) = -mu * (1+s)/s * (1 - (1+s)^t)
 
 mutation_selection_balance(s, mu) = -mu*(1+s)/s
 
+maximal_s(mu, K) = mu/(log(K) - mu)
+
 # Muller's ratchet
 
 function start_ratchet(w0, s, mu, K)
