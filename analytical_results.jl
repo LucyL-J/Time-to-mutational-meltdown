@@ -1,9 +1,6 @@
 import Pkg
-for req in ["Roots", "SpecialFunctions"];
-  if ( ! (req in keys(Pkg.installed())) )
-    Pkg.add(req);
-  end
-end
+Pkg.activate("packages")
+Pkg.instantiate()
 using Roots, SpecialFunctions
 
 critical_number_mutations(w0, s) = -log(w0)/log(1+s)

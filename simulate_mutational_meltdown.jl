@@ -1,9 +1,6 @@
 import Pkg
-for req in ["Distributions", "StatsBase", "Random", "DataFrames", "CSV"];
-  if ( ! (req in keys(Pkg.installed())) )
-    Pkg.add(req);
-  end
-end
+Pkg.activate("packages")
+Pkg.instantiate()
 using Distributions, StatsBase, Random, DataFrames, CSV
 
 function init_quick()
