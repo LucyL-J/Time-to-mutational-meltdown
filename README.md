@@ -16,7 +16,8 @@ The analysis is done in the jupyter notebook `Computational_analysis.ipynb`. Thi
 The simulations are done in the programming language [julia](https://julialang.org).
 To replicate the data in the manuscript, clone this repository, install julia, start it and execute the following
 ```
-include(".../launcher_script.jl")
+cd("...")
+include("launcher_script.jl")
 ratchet_speeds_report()
 times_phases_report()
 ```
