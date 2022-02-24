@@ -24,6 +24,8 @@ with the dots replaced by the path to the repository.
 This will run the simulations for the parameters used in the manuscript. Note that this will take some computational time. \
 To start the notebook, execute
 ```
+import Pkg
+Pkg.add("IJulia")
 using IJulia
 notebook()
 ```
