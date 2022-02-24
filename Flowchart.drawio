@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-02-24T14:40:59.887Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.2 Safari/605.1.15" etag="4mbnzag4Pgqo8ishYaPU" version="16.6.3" type="gitlab">
+<mxfile host="app.diagrams.net" modified="2022-02-24T15:41:25.766Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.2 Safari/605.1.15" etag="83aaZehvpXxkyhB-Ecgb" version="16.6.3" type="gitlab">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="466" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1048" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -83,15 +83,6 @@
         <mxCell id="GPa3LWOIcoC2SGUldEkZ-33" value="Run the simulations for a range of parameters and number of replications" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="404" y="320" width="110" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="GPa3LWOIcoC2SGUldEkZ-34" value="" style="endArrow=classic;html=1;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="GPa3LWOIcoC2SGUldEkZ-33" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="458.5" y="320" as="sourcePoint" />
-            <mxPoint x="458.5" y="250" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="GPa3LWOIcoC2SGUldEkZ-35" value="Output" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" parent="GPa3LWOIcoC2SGUldEkZ-34" connectable="0" vertex="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
         <mxCell id="GPa3LWOIcoC2SGUldEkZ-36" value="Data frame with simulation data" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="404" y="140" width="110" height="40" as="geometry" />
         </mxCell>
@@ -131,9 +122,6 @@
             <mxPoint x="628.5" y="90" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="GPa3LWOIcoC2SGUldEkZ-48" value="Output" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" parent="GPa3LWOIcoC2SGUldEkZ-47" connectable="0" vertex="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
         <mxCell id="GPa3LWOIcoC2SGUldEkZ-49" value="Plots and animations" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="574" y="50" width="110" height="40" as="geometry" />
         </mxCell>
@@ -145,6 +133,15 @@
         </mxCell>
         <mxCell id="GPa3LWOIcoC2SGUldEkZ-53" value="&lt;font color=&quot;#009900&quot;&gt;Computational_analysis.ipynb&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#004C99;rotation=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="529" y="230" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="K4Wd-FpIctX8wbi-Lmwq-1" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="GPa3LWOIcoC2SGUldEkZ-33">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="458.5" y="320" as="sourcePoint" />
+            <mxPoint x="459" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="K4Wd-FpIctX8wbi-Lmwq-2" value="Summary output" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="K4Wd-FpIctX8wbi-Lmwq-1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
