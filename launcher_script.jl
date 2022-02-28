@@ -5,7 +5,7 @@ function ratchet_speeds_s_del(run_s_del::Vector{Float64}; rng=Random.seed!(), ru
   # creates two output files which can be uniquely identified by the seed, one file with the mean ratchet speed and the other with the parameters
   # can be called with a seed to reproduce a certain series of runs
 
-  parameters = DataFrame(runs=runs, w0=init_proliferation_rate, mu_del=mu_del, N0=founder_population_size, K=carrying_capacity, genmax=max_generations, SEED=rng.seed)
+  parameters = DataFrame(runs=runs, w0=wt_reproduction_rate, mu_del=mu_del, N0=founder_population_size, K=carrying_capacity, genmax=max_generations, SEED=rng.seed)
   ratchet_speeds = DataFrame(runs=1:runs)
 
   mean_speed = Vector{Float64}(undef, runs)
@@ -27,7 +27,7 @@ function ratchet_speeds_mu_del(run_mu_del::Vector{Float64}; rng=Random.seed!(), 
   # creates two output files which can be uniquely identified by the seed, one file with the mean ratchet speed and the other with the parameters
   # can be called with a seed to reproduce a certain series of runs
 
-  parameters = DataFrame(runs=runs, w0=init_proliferation_rate, s_del=s_del, N0=founder_population_size, K=carrying_capacity, genmax=max_generations, SEED=rng.seed)
+  parameters = DataFrame(runs=runs, w0=wt_reproduction_rate, s_del=s_del, N0=founder_population_size, K=carrying_capacity, genmax=max_generations, SEED=rng.seed)
   ratchet_speeds = DataFrame(runs=1:runs)
 
   mean_speed = Vector{Float64}(undef, runs)
@@ -48,7 +48,7 @@ function ratchet_speeds_K(run_K::Vector{Float64}; rng=Random.seed!(), runs::Int=
   # creates two output files which can be uniquely identified by the seed, one file with the mean ratchet speed and the other with the parameters
   # can be called with a seed to reproduce a certain series of runs
 
-  parameters = DataFrame(runs=runs, w0=init_proliferation_rate, s_del=s_del, mu_del=mu_del, N0=founder_population_size, genmax=max_generations, SEED=rng.seed)
+  parameters = DataFrame(runs=runs, w0=wt_reproduction_rate, s_del=s_del, mu_del=mu_del, N0=founder_population_size, genmax=max_generations, SEED=rng.seed)
   ratchet_speeds = DataFrame(runs=1:runs)
 
   mean_speed = Vector{Float64}(undef, runs)
@@ -74,7 +74,7 @@ function ratchet_speeds_w0(run_w0::Vector{Float64}; rng=Random.seed!(), runs::In
 
   mean_speed = Vector{Float64}(undef, runs)
   for i in eachindex(run_w0)
-    global init_proliferation_rate = 10^run_w0[i] # be careful, the wild-type reporduction rate is given by 10^(input values)
+    global wt_reproduction_rate = 10^run_w0[i] # be careful, the wild-type reporduction rate is given by 10^(input values)
     for j = 1:runs
       mean_speed[j] = 1 / mean( deleteat!(times_until_loss_fittest_class(), 1)) # do not include the loss of the zero-mutations class
     end
@@ -117,7 +117,7 @@ function times_phases_range_s_del_mu_del(run_s_del::Vector{Float64}, run_mu_del:
   # plus one file with the parameters
   # can be called with a seed to reproduce a certain series of runs
 
-  parameters = DataFrame(runs=runs, w0=init_proliferation_rate, N0=founder_population_size, K=carrying_capacity, genmax=max_generations, SEED=rng.seed)
+  parameters = DataFrame(runs=runs, w0=wt_reproduction_rate, N0=founder_population_size, K=carrying_capacity, genmax=max_generations, SEED=rng.seed)
   equilibration_time_mean = DataFrame(range=run_mu_del)
   equilibration_time_var = DataFrame(range=run_mu_del)
   ratchet_time_mean = DataFrame(range=run_mu_del)
@@ -194,7 +194,7 @@ function times_phases_range_K(run_K::Vector{Float64}; rng=Random.seed!(), runs::
   # plus one file with the parameters
   # can be called with a seed to reproduce a certain series of runs
 
-  parameters = DataFrame(runs=runs, w0=init_proliferation_rate, s_del=s_del, mu_del=mu_del, N0=founder_population_size, genmax=max_generations, SEED=rng.seed)
+  parameters = DataFrame(runs=runs, w0=wt_reproduction_rate, s_del=s_del, mu_del=mu_del, N0=founder_population_size, genmax=max_generations, SEED=rng.seed)
   times_mean_var = DataFrame(times=["eq_mean", "eq_var", "r_mean", "r_var", "m_mean", "m_var"])
 
   equilibration_time = Vector{Int}(undef, runs)
@@ -244,7 +244,7 @@ function times_phases_range_w0(run_w0::Vector{Float64}; rng=Random.seed!(), runs
   survival = 0
 
   for i in eachindex(run_w0)
-    global init_proliferation_rate = 10^run_w0[i] # be careful, the wild-type reporduction rate is given by 10^(input values)
+    global wt_reproduction_rate = 10^run_w0[i] # be careful, the wild-type reporduction rate is given by 10^(input values)
     for k = 1:runs
       survival = 0
       equilibration_time[k], ratchet_time[k], meltdown_time[k] = times_phases()
