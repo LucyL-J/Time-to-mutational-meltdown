@@ -34,6 +34,8 @@ end
 
 speed_ratchet_Lynch(s, mu, K) = mu*(1+s)/(1-K*s)
 
+speed_ratchet_Rouzine(s, mu, K) = 1 + s*log(K)/mu
+
 function speed_ratchet_Pamilo(s, mu, K)
     if mu > -s*log(K)
         return mu + s*log(K)
