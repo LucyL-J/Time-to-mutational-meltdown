@@ -10,7 +10,7 @@ We run the simulations for the parameter regime described in the manuscript usin
 
 The analysis is done in the jupyter notebook `Computational_analysis.ipynb`. This notebook is self-explanatory.
 
-![Flow chart](Flowchart.png)
+![Flow chart](Flowchart.jpg)
 
 
 The simulations are done in the programming language [julia](https://julialang.org).
