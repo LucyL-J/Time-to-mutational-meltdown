@@ -1,6 +1,6 @@
 # Time-to-mutational-meltdown
 Documentation of the simulation and the computational analysis of the manuscript \
-**The extinction time under mutational meltdown** \
+**The extinction time under mutational meltdown driven by high mutation rates** \
 Lucy Lansch-Justen, Davide Cusseddu, Mark A. Schmitz, Claudia Bank \
 bioRxiv 2022.02.01.478601; doi: [https://doi.org/10.1101/2022.02.01.478601](https://doi.org/10.1101/2022.02.01.478601).
 
